@@ -1,0 +1,3284 @@
+<!DOCTYPE html>
+
+<html lang="hi-IN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="डिजिटल हन्ना आर्ट्स® — कला, डेटा, कृत्रिम बुद्धि और ब्लॉकचेन के संगम पर स्थित गणनात्मक सृजनशीलता। भारतीय सौन्दर्य-परम्परा में रचा उत्तर-उत्तर-आधुनिक अमूर्त अभिव्यक्तिवाद।"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0d0806"
+    >
+
+    <meta
+        property="og:title"
+        content="डिजिटल हन्ना आर्ट्स® — अमूर्त यन्त्र"
+    >
+
+    <meta
+        property="og:description"
+        content="कला × डेटा × बुद्धि × श्रृंखला × अमूर्त"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="assets/DHA_logo.png"
+    >
+
+    <title>
+        डिजिटल हन्ना आर्ट्स® — [अमूर्त यन्त्र]
+    </title>
+
+
+    <!-- =====================================================
+         फ़ॉन्ट · FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Kalam:wght@300;400;700&family=Mukta:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           डिजिटल हन्ना आर्ट्स — अमूर्त प्रोटोकॉल · भारतीय संस्करण
+           DHA — ABSTRACT PROTOCOL · BHĀRATĪYA EDITION
+        ====================================================== */
+
+        :root {
+
+            /* काजल · मसि — kajal / ink */
+            --काजल: #0d0806;
+            --काजल-2: #17110c;
+            --काजल-3: #221a12;
+
+            /* चन्दन · हस्ती-कागज़ — sandalwood paper */
+            --चन्दन: #ece0c4;
+            --चन्दन-2: #c9b88a;
+            --धूल: #8a7a5f;
+            --भस्म: #4a4034;
+
+            /* रंग-तालिका — primary accents */
+            --सिंदूर: #b8261f;   /* 朱 · vermillion */
+            --हल्दी: #d4a017;    /* 黄 · turmeric gold */
+            --नील: #1a3a6b;      /* 靛 · indigo */
+            --मोर: #1b6b5a;      /* 绿 · peacock green */
+            --केसर: #e8701a;     /* 藏红花 · saffron */
+            --सोना: #c9a227;     /* 金 · gold */
+
+            --रेखा: rgba(236,224,196,.22);
+            --रेखा-हल्की: rgba(236,224,196,.07);
+
+            --अधिकतम: 1400px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--काजल);
+        }
+
+
+        body {
+
+            background: var(--काजल);
+
+            color: var(--चन्दन);
+
+            font-family:
+                "Mukta",
+                "Hind",
+                system-ui,
+                sans-serif;
+
+            overflow-x: hidden;
+
+            cursor: crosshair;
+
+            position: relative;
+
+            line-height: 1.85;
+
+        }
+
+
+        ::selection {
+            background: var(--सिंदूर);
+            color: var(--चन्दन);
+        }
+
+
+        /* =====================================================
+           हस्ती-कागज़ का तन्तु — PAPER TEXTURE
+        ====================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9997;
+
+            opacity: .05;
+
+            background-image:
+
+                repeating-conic-gradient(
+                    from 0deg,
+                    rgba(236,224,196,.12) 0deg,
+                    rgba(0,0,0,.10) 1deg,
+                    rgba(236,224,196,.06) 2deg,
+                    rgba(0,0,0,.06) 3deg
+                );
+
+            mix-blend-mode: overlay;
+
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9996;
+
+            background:
+
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 2px,
+                    rgba(236,224,196,.016) 3px,
+                    transparent 4px
+                ),
+
+                radial-gradient(
+                    ellipse at 15% 10%,
+                    rgba(184,38,31,.06),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    ellipse at 85% 75%,
+                    rgba(26,58,107,.07),
+                    transparent 45%
+                );
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        /* =====================================================
+           चल-चित्र · KEYFRAMES
+        ====================================================== */
+
+        @keyframes स्याही-फैलाव {
+
+            0% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            6% {
+                transform: translate(-2px, 2px);
+                clip-path: inset(12% 0 76% 0);
+            }
+            12% {
+                transform: translate(3px, -1px);
+                clip-path: inset(42% 0 38% 0);
+            }
+            18% {
+                transform: translate(-1px, -3px);
+                clip-path: inset(68% 0 12% 0);
+            }
+            24% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            100% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+
+        }
+
+
+        @keyframes तूलिका {
+
+            0%, 100% { clip-path: inset(0 0 0 0); }
+            10% { clip-path: inset(22% 0 58% 0); }
+            20% { clip-path: inset(78% 0 12% 0); }
+            30% { clip-path: inset(38% 0 32% 0); }
+            40% { clip-path: inset(8% 0 88% 0); }
+            50% { clip-path: inset(0 0 0 0); }
+
+        }
+
+
+        @keyframes दीप-रेखा {
+
+            0% { top: -100%; }
+            100% { top: 200%; }
+
+        }
+
+
+        @keyframes मण्डल-चक्र {
+
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+
+        }
+
+
+        @keyframes मण्डल-विपरीत {
+
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+
+        }
+
+
+        @keyframes दीपक-स्पन्दन {
+
+            0%, 100% { opacity: .55; transform: scale(1); }
+            50% { opacity: .95; transform: scale(1.04); }
+
+        }
+
+
+        @keyframes रंगोली-स्पन्दन {
+
+            0%, 100% { opacity: .35; }
+            50% { opacity: .75; }
+
+        }
+
+
+        @keyframes बिन्दु-सरकाव {
+
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 80px 80px, 40px 40px; }
+
+        }
+
+
+        /* =====================================================
+           दीप-रेखा · SCANLINE
+        ====================================================== */
+
+        .दीप-रेखा {
+
+            position: fixed;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--सिंदूर),
+                var(--हल्दी),
+                transparent
+            );
+
+            opacity: .18;
+
+            pointer-events: none;
+
+            z-index: 9000;
+
+            animation: दीप-रेखा 11s linear infinite;
+
+        }
+
+
+        /* =====================================================
+           जाली पट्टी — JALI LATTICE STRIP
+        ====================================================== */
+
+        .जाली {
+
+            height: 14px;
+
+            width: 100%;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--सिंदूर) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(225deg,
+                    var(--सिंदूर) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(315deg,
+                    var(--नील) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(45deg,
+                    var(--नील) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                var(--हल्दी);
+
+            opacity: .85;
+
+        }
+
+
+        .जाली-हल्की {
+
+            height: 6px;
+
+            width: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--सिंदूर) 0 10px,
+                    transparent 10px 16px,
+                    var(--हल्दी) 16px 22px,
+                    transparent 22px 28px,
+                    var(--मोर) 28px 38px,
+                    transparent 38px 44px
+                );
+
+            opacity: .55;
+
+        }
+
+
+        /* =====================================================
+           नेविगेशन — NAVIGATION
+        ====================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(13,8,6,.88);
+
+            border-bottom: 1px solid var(--रेखा);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+
+            padding: 0 clamp(16px, 4vw, 60px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            height: 66px;
+
+        }
+
+
+        nav::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -4px;
+
+            width: 100%;
+            height: 4px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--सिंदूर) 0 8px,
+                    transparent 8px 12px,
+                    var(--हल्दी) 12px 18px,
+                    transparent 18px 22px,
+                    var(--नील) 22px 30px,
+                    transparent 30px 34px
+                );
+
+            opacity: .6;
+
+        }
+
+
+        .नेव-चिह्न {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-weight: 400;
+
+            font-size: 17px;
+
+            letter-spacing: .12em;
+
+            color: var(--चन्दन);
+
+            text-decoration: none;
+
+        }
+
+
+        .नेव-चित्र {
+
+            width: 30px;
+            height: 30px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.3) hue-rotate(-15deg) contrast(1.15);
+
+        }
+
+
+        .नेव-सम्पर्क {
+
+            display: flex;
+
+            gap: 26px;
+
+            align-items: center;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: .14em;
+
+            font-weight: 500;
+
+        }
+
+
+        .नेव-सम्पर्क a {
+
+            color: var(--धूल);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+            position: relative;
+
+        }
+
+
+        .नेव-सम्पर्क a::before {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -5px;
+            left: 0;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--सिंदूर);
+
+            transition: width .3s ease;
+
+        }
+
+
+        .नेव-सम्पर्क a:hover {
+            color: var(--चन्दन);
+        }
+
+
+        .नेव-सम्पर्क a:hover::before {
+            width: 100%;
+        }
+
+
+        /* भाषा-चयन — LANGUAGE SWITCH */
+
+        .भाषा {
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+        .भाषा-निवेश {
+
+            position: absolute;
+
+            opacity: 0;
+
+            width: 0;
+            height: 0;
+
+        }
+
+
+        .भाषा-बटन {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            cursor: pointer;
+
+            padding: 8px 14px;
+
+            border: 1px solid var(--रेखा);
+
+            background: transparent;
+
+            font-family: "Hind", "DM Mono", monospace;
+
+            font-size: 11px;
+
+            letter-spacing: .1em;
+
+            color: var(--चन्दन);
+
+            transition: all .2s ease;
+
+            user-select: none;
+
+        }
+
+
+        .भाषा-बटन:hover {
+
+            background: var(--सिंदूर);
+
+            color: var(--चन्दन);
+
+            border-color: var(--सिंदूर);
+
+        }
+
+
+        .भाषा-सूची {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 160px;
+
+            background: var(--काजल-2);
+
+            border: 1px solid var(--रेखा);
+
+            padding: 0;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(-4px);
+
+            transition: all .2s ease;
+
+            z-index: 1001;
+
+        }
+
+
+        .भाषा-विकल्प {
+
+            display: block;
+
+            padding: 10px 16px;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .08em;
+
+            color: var(--धूल);
+
+            text-decoration: none;
+
+            transition: all .2s ease;
+
+            border-bottom: 1px solid rgba(236,224,196,.06);
+
+        }
+
+
+        .भाषा-विकल्प:hover {
+
+            background: var(--काजल-3);
+
+            color: var(--हल्दी);
+
+        }
+
+
+        .भाषा-विकल्प.सक्रिय {
+
+            color: var(--चन्दन);
+
+            background: var(--सिंदूर);
+
+        }
+
+
+        .भाषा-निवेश:checked ~ .भाषा-सूची,
+        .भाषा:focus-within .भाषा-सूची {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           प्रथम पटल · HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 110px 0 60px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-जाल {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            width: 100%;
+
+        }
+
+
+        .hero-वाणी {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-शीर्षक {
+
+            font-family: "Rozha One", "Tiro Devanagari Hindi", serif;
+
+            font-size: 12px;
+
+            letter-spacing: .3em;
+
+            color: var(--हल्दी);
+
+            margin-bottom: 18px;
+
+            display: inline-block;
+
+            border: 1px solid var(--हल्दी);
+
+            padding: 8px 18px;
+
+            transform: rotate(-1deg);
+
+            background: rgba(212,160,23,.06);
+
+        }
+
+
+        .hero-वाक्य {
+
+            font-family: "Tiro Devanagari Hindi", serif;
+
+            font-style: italic;
+
+            font-size: 15px;
+
+            letter-spacing: .06em;
+
+            color: var(--मोर);
+
+            margin-bottom: 26px;
+
+            padding-left: 20px;
+
+            border-left: 2px solid var(--मोर);
+
+            transform: rotate(-.5deg);
+
+        }
+
+
+        .hero-वाणी h1 {
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-weight: 400;
+
+            font-size: clamp(3.4rem, 12vw, 9.5rem);
+
+            line-height: 1;
+
+            letter-spacing: .01em;
+
+            position: relative;
+
+        }
+
+
+        .hero-वाणी h1 .शब्द {
+
+            display: block;
+
+            position: relative;
+
+        }
+
+
+        .hero-वाणी h1 .शब्द-1 {
+
+            color: var(--चन्दन);
+
+            text-shadow:
+
+                5px 0 0 var(--सिंदूर),
+
+                -4px 0 0 var(--नील);
+
+            animation: तूलिका 7s infinite;
+
+        }
+
+
+        .hero-वाणी h1 .शब्द-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--सिंदूर);
+
+            font-style: italic;
+
+            transform: translateX(26px);
+
+            animation: स्याही-फैलाव 9s infinite;
+
+        }
+
+
+        .hero-वाणी h1 .शब्द-3 {
+
+            color: var(--काजल);
+
+            background: var(--हल्दी);
+
+            padding: 0 16px;
+
+            display: inline-block;
+
+            transform: skewX(-8deg);
+
+            animation: दीपक-स्पन्दन 5s infinite;
+
+        }
+
+
+        .hero-वाणी p {
+
+            margin-top: 42px;
+
+            max-width: 620px;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--धूल);
+
+            border-left: 3px solid var(--सिंदूर);
+
+            padding-left: 22px;
+
+        }
+
+
+        .hero-वाणी p strong {
+
+            color: var(--चन्दन);
+
+            font-weight: 700;
+
+            border-bottom: 2px solid var(--हल्दी);
+
+        }
+
+
+        .hero-कर्म {
+
+            display: flex;
+
+            gap: 16px;
+
+            margin-top: 42px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .बटन {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 30px;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            letter-spacing: .12em;
+
+            text-decoration: none;
+
+            border: 1px solid var(--रेखा);
+
+            background: transparent;
+
+            color: var(--चन्दन);
+
+            transition: all .25s ease;
+
+            position: relative;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+        }
+
+
+        .बटन::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 100%;
+            height: 100%;
+
+            background: var(--सिंदूर);
+
+            transition: left .25s ease;
+
+            z-index: -1;
+
+        }
+
+
+        .बटन:hover::before {
+            left: 0;
+        }
+
+
+        .बटन:hover {
+
+            color: var(--चन्दन);
+
+            border-color: var(--सिंदूर);
+
+        }
+
+
+        .बटन-प्रधान {
+
+            background: var(--सिंदूर);
+
+            color: var(--चन्दन);
+
+            border-color: var(--सिंदूर);
+
+        }
+
+
+        .बटन-प्रधान::before {
+            background: var(--हल्दी);
+        }
+
+
+        .बटन-प्रधान:hover {
+            color: var(--काजल);
+            border-color: var(--हल्दी);
+        }
+
+
+        /* =====================================================
+           मण्डल-कला · MANDALA ART (Hero visual)
+        ====================================================== */
+
+        .hero-कला {
+
+            position: relative;
+
+            min-height: 620px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .मण्डल-चौखट {
+
+            position: relative;
+
+            width: min(100%, 540px);
+
+            aspect-ratio: 1;
+
+            background: var(--काजल-2);
+
+            border: 2px solid var(--हल्दी);
+
+            padding: 18px;
+
+            box-shadow:
+
+                0 0 0 6px var(--काजल),
+
+                0 0 0 7px var(--रेखा),
+
+                0 30px 90px rgba(184,38,31,.20);
+
+        }
+
+
+        .मण्डल-चौखट::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 6px;
+
+            border: 1px solid var(--सिंदूर);
+
+            pointer-events: none;
+
+            z-index: 5;
+
+        }
+
+
+        .मण्डल-चौखट::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 12px;
+
+            border: 1px solid rgba(212,160,23,.4);
+
+            pointer-events: none;
+
+            z-index: 5;
+
+        }
+
+
+        /* रंगोली बिन्दु-जाल */
+
+        .रंगोली {
+
+            position: absolute;
+
+            inset: 18px;
+
+            background-image:
+
+                radial-gradient(
+                    circle,
+                    rgba(184,38,31,.55) 2px,
+                    transparent 2.5px
+                ),
+
+                radial-gradient(
+                    circle,
+                    rgba(212,160,23,.45) 1.5px,
+                    transparent 2px
+                ),
+
+                radial-gradient(
+                    circle at center,
+                    rgba(27,107,90,.10) 0%,
+                    transparent 55%
+                );
+
+            background-size:
+                40px 40px,
+                20px 20px,
+                100% 100%;
+
+            background-position:
+                0 0,
+                10px 10px,
+                0 0;
+
+            animation:
+
+                रंगोली-स्पन्दन 6s ease-in-out infinite,
+                बिन्दु-सरकाव 40s linear infinite;
+
+            z-index: 1;
+
+        }
+
+
+        /* मण्डल की वलय-रेखाएँ */
+
+        .मण्डल-वलय {
+
+            position: absolute;
+
+            inset: 18px;
+
+            display: grid;
+
+            place-items: center;
+
+            z-index: 2;
+
+            pointer-events: none;
+
+        }
+
+
+        .वलय {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border: 1px solid;
+
+        }
+
+
+        .वलय-1 {
+
+            width: 88%;
+            height: 88%;
+
+            border-color: rgba(184,38,31,.5);
+
+            border-style: dashed;
+
+            animation: मण्डल-चक्र 60s linear infinite;
+
+        }
+
+
+        .वलय-2 {
+
+            width: 68%;
+            height: 68%;
+
+            border-color: rgba(212,160,23,.45);
+
+            animation: मण्डल-विपरीत 45s linear infinite;
+
+        }
+
+
+        .वलय-3 {
+
+            width: 48%;
+            height: 48%;
+
+            border-color: rgba(27,107,90,.55);
+
+            border-style: dotted;
+
+            border-width: 2px;
+
+            animation: मण्डल-चक्र 30s linear infinite;
+
+        }
+
+
+        .वलय-4 {
+
+            width: 30%;
+            height: 30%;
+
+            border-color: rgba(184,38,31,.65);
+
+            animation: मण्डल-विपरीत 22s linear infinite;
+
+        }
+
+
+        /* मुख्य अक्षर */
+
+        .मण्डल-अक्षर {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            font-family: "Yatra One", serif;
+
+            font-size: clamp(8rem, 20vw, 15rem);
+
+            color: var(--सिंदूर);
+
+            text-shadow:
+
+                6px 6px 0 var(--हल्दी),
+
+                -3px -3px 0 var(--नील),
+
+                0 0 60px rgba(184,38,31,.55);
+
+            z-index: 4;
+
+            animation: दीपक-स्पन्दन 7s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        /* नीचे की टिप्पणी */
+
+        .मण्डल-टिप्पणी {
+
+            position: absolute;
+
+            bottom: -46px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-family: "DM Mono", monospace;
+
+            font-size: 10px;
+
+            letter-spacing: .38em;
+
+            color: var(--धूल);
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+
+            z-index: 6;
+
+        }
+
+
+        /* =====================================================
+           चल-पट्टी · MARQUEE
+        ====================================================== */
+
+        .चल-पट्टी {
+
+            border-top: 1px solid var(--रेखा);
+
+            border-bottom: 1px solid var(--रेखा);
+
+            padding: 20px 0;
+
+            overflow: hidden;
+
+            background: var(--काजल-2);
+
+            position: relative;
+
+        }
+
+
+        .चल-पट्टी::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 62px,
+                    rgba(212,160,23,.05) 63px,
+                    transparent 64px
+                );
+
+            pointer-events: none;
+
+            z-index: 1;
+
+        }
+
+
+        .चल-पट्टी-सरणि {
+
+            display: inline-flex;
+
+            gap: 44px;
+
+            animation: marquee 26s linear infinite;
+
+            font-family: "Tiro Devanagari Hindi", "Rozha One", serif;
+
+            font-size: 17px;
+
+            letter-spacing: .12em;
+
+            white-space: nowrap;
+
+        }
+
+
+        .चल-पट्टी-सरणि span {
+
+            color: var(--धूल);
+
+            position: relative;
+
+        }
+
+
+        .चल-पट्टी-सरणि span::before {
+
+            content: "॥";
+
+            color: var(--सिंदूर);
+
+            margin-right: 8px;
+
+        }
+
+
+        .चल-पट्टी-सरणि span::after {
+
+            content: "॥";
+
+            color: var(--सिंदूर);
+
+            margin-left: 8px;
+
+        }
+
+
+        @keyframes marquee {
+
+            to { transform: translateX(-50%); }
+
+        }
+
+
+        /* =====================================================
+           खण्ड · SECTIONS
+        ====================================================== */
+
+        section {
+
+            padding: 130px 0;
+
+            position: relative;
+
+            border-bottom: 1px solid var(--रेखा-हल्की);
+
+        }
+
+
+        .पात्र {
+
+            width: min(calc(100% - 40px), var(--अधिकतम));
+
+            margin: auto;
+
+            position: relative;
+
+        }
+
+
+        .खण्ड-चिह्न {
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: .3em;
+
+            color: var(--सिंदूर);
+
+            margin-bottom: 32px;
+
+            display: inline-block;
+
+            transform: rotate(-1deg);
+
+            border-bottom: 2px solid var(--हल्दी);
+
+            padding-bottom: 6px;
+
+        }
+
+
+        .खण्ड-शीर्षक {
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-size: clamp(2.6rem, 6.4vw, 6.4rem);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            margin-bottom: 34px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .खण्ड-शीर्षक .छाया {
+
+            color: transparent;
+
+            -webkit-text-stroke: 1.5px var(--हल्दी);
+
+            font-style: italic;
+
+        }
+
+
+        .खण्ड-शीर्षक .काट {
+
+            text-decoration: line-through;
+
+            text-decoration-color: var(--सिंदूर);
+
+            text-decoration-thickness: 4px;
+
+        }
+
+
+        .खण्ड-भूमिका {
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--धूल);
+
+            max-width: 720px;
+
+            margin-bottom: 62px;
+
+            border-left: 3px solid var(--हल्दी);
+
+            padding-left: 22px;
+
+        }
+
+
+        /* =====================================================
+           चार-स्तम्भ · DOMAINS
+        ====================================================== */
+
+        .स्तम्भ-चतुष्क {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 0;
+
+            border: 1px solid var(--रेखा);
+
+        }
+
+
+        .स्तम्भ {
+
+            padding: 44px 30px;
+
+            min-height: 320px;
+
+            position: relative;
+
+            border-right: 1px solid var(--रेखा);
+
+            border-bottom: 1px solid var(--रेखा);
+
+            background: var(--काजल);
+
+            transition: all .3s ease;
+
+            cursor: crosshair;
+
+        }
+
+
+        .स्तम्भ:nth-child(4n) {
+            border-right: none;
+        }
+
+
+        .स्तम्भ:nth-last-child(-n+4) {
+            border-bottom: none;
+        }
+
+
+        .स्तम्भ:hover {
+
+            background: var(--काजल-2);
+
+            transform: translateY(-4px);
+
+            border-color: var(--सिंदूर);
+
+        }
+
+
+        .स्तम्भ::before {
+
+            content: attr(data-संख्या);
+
+            position: absolute;
+
+            top: 22px;
+            right: 26px;
+
+            font-family: "Yatra One", serif;
+
+            font-size: 24px;
+
+            color: var(--सिंदूर);
+
+            opacity: .8;
+
+        }
+
+
+        .स्तम्भ-चिह्न {
+
+            font-family: "Tiro Devanagari Hindi", serif;
+
+            font-size: 54px;
+
+            margin-bottom: 30px;
+
+            color: var(--हल्दी);
+
+            opacity: .9;
+
+            animation: दीपक-स्पन्दन 6s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        .स्तम्भ h3 {
+
+            font-family: "Rozha One", "Tiro Devanagari Hindi", serif;
+
+            font-size: 22px;
+
+            font-weight: 400;
+
+            letter-spacing: .08em;
+
+            margin-bottom: 16px;
+
+            color: var(--चन्दन);
+
+        }
+
+
+        .स्तम्भ p {
+
+            font-size: 15px;
+
+            line-height: 1.95;
+
+            color: var(--धूल);
+
+        }
+
+
+        /* =====================================================
+           दर्शन · ABOUT
+        ====================================================== */
+
+        .दर्शन-जाल {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .दर्शन-चित्र {
+
+            min-height: 520px;
+
+            position: relative;
+
+            background: var(--काजल-2);
+
+            border: 1px solid var(--रेखा);
+
+            overflow: hidden;
+
+        }
+
+
+        .दर्शन-चित्र::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(184,38,31,.40),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 75% 65%,
+                    rgba(26,58,107,.45),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 50% 92%,
+                    rgba(212,160,23,.28),
+                    transparent 50%
+                );
+
+            filter: blur(34px);
+
+            animation: दीपक-स्पन्दन 14s ease-in-out infinite;
+
+        }
+
+
+        .दर्शन-चित्र::after {
+
+            content: "दर्शन";
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%) rotate(-4deg);
+
+            font-family: "Yatra One", serif;
+
+            font-size: clamp(6rem, 14vw, 12rem);
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--सिंदूर);
+
+            opacity: .6;
+
+            line-height: 1;
+
+            white-space: nowrap;
+
+        }
+
+
+        .दर्शन-वाणी h2 {
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            margin-bottom: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .दर्शन-वाणी h2 .रेखांकित {
+
+            background: var(--सिंदूर);
+
+            color: var(--चन्दन);
+
+            padding: 0 14px;
+
+            display: inline-block;
+
+            transform: skewX(-4deg);
+
+        }
+
+
+        .दर्शन-वाणी p {
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--धूल);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .दर्शन-वाणी p strong {
+
+            color: var(--हल्दी);
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           कार्य · PROJECTS
+        ====================================================== */
+
+        .कार्य {
+
+            margin-bottom: 44px;
+
+            border: 1px solid var(--रेखा);
+
+            background: var(--काजल-2);
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            position: relative;
+
+            transition: all .3s ease;
+
+        }
+
+
+        .कार्य:hover {
+
+            border-color: var(--सिंदूर);
+
+            transform: translateX(-4px);
+
+        }
+
+
+        .कार्य-चित्र {
+
+            min-height: 420px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--काजल);
+
+        }
+
+
+        .कार्य-चित्र img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: grayscale(100%) sepia(.3) contrast(1.15);
+
+            transition: all .6s ease;
+
+        }
+
+
+        .कार्य:hover .कार्य-चित्र img {
+
+            filter: grayscale(0%) sepia(.15) contrast(1.08) hue-rotate(-12deg);
+
+            transform: scale(1.05);
+
+        }
+
+
+        .कार्य-चित्र::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 4px,
+                    rgba(0,0,0,.35) 5px
+                );
+
+            z-index: 1;
+
+            pointer-events: none;
+
+        }
+
+
+        .कार्य-विवरण {
+
+            padding: clamp(30px, 5vw, 60px);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+        .कार्य-शीर्षक-रेखा {
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .28em;
+
+            color: var(--हल्दी);
+
+            margin-bottom: 22px;
+
+            display: inline-block;
+
+        }
+
+
+        .कार्य-विवरण h3 {
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-size: clamp(2rem, 4.2vw, 4.2rem);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            margin-bottom: 22px;
+
+            color: var(--चन्दन);
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .कार्य-विवरण p {
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--धूल);
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .तकनीक {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .तकनीक span {
+
+            border: 1px solid var(--रेखा);
+
+            padding: 6px 12px;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .08em;
+
+            color: var(--चन्दन-2);
+
+            background: var(--काजल);
+
+        }
+
+
+        .कार्य-कड़ियाँ {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .कार्य-कड़ियाँ .बटन {
+
+            padding: 12px 20px;
+
+            font-size: 12px;
+
+        }
+
+
+        .कार्य-मोहर {
+
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+
+            width: 74px;
+            height: 74px;
+
+            object-fit: contain;
+
+            z-index: 3;
+
+            padding: 10px;
+
+            background: rgba(0,0,0,.6);
+
+            border: 1px solid var(--रेखा);
+
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
+
+            filter: none !important;
+
+        }
+
+
+        .कार्य:hover .कार्य-मोहर {
+            border-color: var(--सिंदूर);
+        }
+
+
+        .कार्य.विस्तृत .कार्य-चित्र {
+            min-height: 480px;
+        }
+
+
+        /* =====================================================
+           हन्ना · HANA
+        ====================================================== */
+
+        .हन्ना-जाल {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .हन्ना-वाणी h2 {
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-size: clamp(3rem, 7.5vw, 7.5rem);
+
+            line-height: 1;
+
+            font-weight: 400;
+
+            margin-bottom: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .हन्ना-वाणी h2 .शब्द {
+            display: block;
+        }
+
+
+        .हन्ना-वाणी h2 .शब्द-1 {
+            color: var(--चन्दन);
+        }
+
+
+        .हन्ना-वाणी h2 .शब्द-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--सिंदूर);
+
+            font-style: italic;
+
+            transform: translateX(30px);
+
+        }
+
+
+        .हन्ना-वाणी p {
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--धूल);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .हन्ना-वाणी p strong {
+            color: var(--हल्दी);
+        }
+
+
+        .हन्ना-चित्र {
+
+            min-height: 520px;
+
+            position: relative;
+
+            border: 1px solid var(--रेखा);
+
+            background: var(--काजल-2);
+
+            overflow: hidden;
+
+        }
+
+
+        .हन्ना-चित्र::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(212,160,23,.24),
+                    transparent 50%,
+                    rgba(184,38,31,.24)
+                );
+
+            z-index: 1;
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        .हन्ना-चित्र img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: contrast(1.28) saturate(1.15) sepia(.12);
+
+            animation: तूलिका 11s infinite;
+
+        }
+
+
+        /* =====================================================
+           प्रश्न · PHILOSOPHY
+        ====================================================== */
+
+        .प्रश्न {
+
+            text-align: center;
+
+            padding: 170px 0;
+
+            background: var(--काजल);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .प्रश्न::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(184,38,31,.13),
+                    transparent 58%
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        .प्रश्न-चिह्न {
+
+            font-family: "Tiro Devanagari Hindi", serif;
+
+            font-style: italic;
+
+            font-size: 14px;
+
+            letter-spacing: .3em;
+
+            color: var(--सिंदूर);
+
+            margin-bottom: 44px;
+
+            position: relative;
+
+        }
+
+
+        .प्रश्न h2 {
+
+            max-width: 1140px;
+
+            margin: auto;
+
+            font-family: "Yatra One", "Rozha One", serif;
+
+            font-size: clamp(2.4rem, 6.6vw, 6.6rem);
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            position: relative;
+
+        }
+
+
+        .प्रश्न h2 .पंक्ति {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+
+        .प्रश्न h2 .पंक्ति-1 {
+            color: var(--चन्दन);
+        }
+
+
+        .प्रश्न h2 .पंक्ति-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--हल्दी);
+
+            font-style: italic;
+
+        }
+
+
+        .प्रश्न h2 .पंक्ति-3 {
+
+            background: var(--सिंदूर);
+
+            color: var(--चन्दन);
+
+            display: inline-block;
+
+            padding: 0 18px;
+
+            transform: skewX(-8deg);
+
+        }
+
+
+        /* =====================================================
+           पाद · FOOTER
+        ====================================================== */
+
+        footer {
+
+            border-top: 3px double var(--हल्दी);
+
+            padding: 64px 0 34px;
+
+            background: var(--काजल-2);
+
+            position: relative;
+
+        }
+
+
+        footer::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -3px;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--सिंदूर) 0 12px,
+                    transparent 12px 18px
+                );
+
+        }
+
+
+        .पाद-जाल {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 40px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 44px;
+
+        }
+
+
+        .पाद-चिह्न {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            font-family: "Yatra One", serif;
+
+            font-size: 19px;
+
+            letter-spacing: .15em;
+
+            color: var(--चन्दन);
+
+        }
+
+
+        .पाद-चित्र {
+
+            width: 44px;
+            height: 44px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.3) hue-rotate(-15deg);
+
+        }
+
+
+        .पाद-उपशीर्षक {
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 13px;
+
+            color: var(--धूल);
+
+            letter-spacing: .12em;
+
+            margin-top: 12px;
+
+        }
+
+
+        .पाद-कड़ियाँ {
+
+            display: flex;
+
+            gap: 26px;
+
+            flex-wrap: wrap;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .15em;
+
+        }
+
+
+        .पाद-कड़ियाँ a {
+
+            color: var(--धूल);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+        }
+
+
+        .पाद-कड़ियाँ a:hover {
+            color: var(--हल्दी);
+        }
+
+
+        .अधिकार {
+
+            border-top: 1px solid var(--रेखा-हल्की);
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-family: "Hind", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .15em;
+
+            color: var(--भस्म);
+
+        }
+
+
+        /* =====================================================
+           प्रतिक्रिया · RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .नेव-सम्पर्क { display: none; }
+
+            .hero-जाल,
+            .दर्शन-जाल,
+            .हन्ना-जाल,
+            .कार्य {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .स्तम्भ-चतुष्क {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .स्तम्भ:nth-child(2n) { border-right: none; }
+
+
+            .hero-कला { min-height: 440px; }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 90px 0 40px;
+            }
+
+
+            .hero-जाल { gap: 30px; }
+
+
+            .hero-वाणी h1 { font-size: 3.4rem; }
+
+
+            .hero-कला {
+                min-height: 320px;
+                order: -1;
+            }
+
+
+            .स्तम्भ-चतुष्क { grid-template-columns: 1fr; }
+
+
+            .स्तम्भ {
+
+                border-right: none;
+                border-bottom: 1px solid var(--रेखा);
+                min-height: 260px;
+
+            }
+
+
+            .स्तम्भ:nth-last-child(-n+4) {
+                border-bottom: 1px solid var(--रेखा);
+            }
+
+
+            .स्तम्भ:last-child { border-bottom: none; }
+
+
+            .पाद-जाल,
+            .अधिकार {
+
+                flex-direction: column;
+
+            }
+
+
+            .पाद-कड़ियाँ { flex-wrap: wrap; }
+
+
+            .कार्य-मोहर {
+
+                width: 58px;
+                height: 58px;
+                bottom: 14px;
+                left: 14px;
+                padding: 8px;
+
+            }
+
+            .कार्य-कड़ियाँ {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+        }
+
+
+        /* =====================================================
+           अभिगम्यता · ACCESSIBILITY
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         दीप-रेखा
+    ====================================================== -->
+
+    <div class="दीप-रेखा"></div>
+
+
+    <!-- =====================================================
+         जाली-पट्टी
+    ====================================================== -->
+
+    <div class="जाली-हल्की"></div>
+
+
+    <!-- =====================================================
+         नेविगेशन
+    ====================================================== -->
+
+    <nav>
+
+        <a href="#top" class="नेव-चिह्न">
+
+            <img
+                src="assets/DHA_logo_h.png"
+                alt="डिजिटल हन्ना आर्ट्स"
+                class="नेव-चित्र"
+            >
+
+            <span>डिजिटल हन्ना आर्ट्स®</span>
+
+        </a>
+
+
+        <div class="नेव-सम्पर्क">
+
+            <a href="#about">दर्शन</a>
+
+            <a href="#domains">स्तम्भ</a>
+
+            <a href="#work">कार्य</a>
+
+            <a href="#hana">हन्ना</a>
+
+            <a
+                href="https://github.com/DigitalHanaArts"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                स्रोत
+            </a>
+
+        </div>
+
+
+        <div class="भाषा">
+
+            <input
+                type="checkbox"
+                id="भाषा-निवेश"
+                class="भाषा-निवेश"
+                aria-label="भाषा सूची खोलें"
+            >
+
+            <label for="भाषा-निवेश" class="भाषा-बटन">
+                [हिन्दी] ▾
+            </label>
+
+            <div class="भाषा-सूची" role="menu">
+
+                <a href="#" class="भाषा-विकल्प सक्रिय">[हिन्दी]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha/" class="भाषा-विकल्प">[English]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-zh/" class="भाषा-विकल्प">[中文]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-ko/" class="भाषा-विकल्प">[조선어]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-per/" class="भाषा-विकल्प">[فارسی]</a>
+
+                <a href="https://digitalhanaarts.github.io/it_dha/" class="भाषा-विकल्प">[Italiano]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha_ar/" class="भाषा-विकल्प">[العربية]</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         मुख्य
+    ====================================================== -->
+
+    <main id="top">
+
+
+        <!-- =================================================
+             प्रथम पटल · HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="पात्र">
+
+                <div class="hero-जाल">
+
+                    <div class="hero-वाणी">
+
+                        <span class="hero-शीर्षक">॥ ॐ ॥</span>
+
+                        <div class="hero-वाक्य">
+                            एकं सत् विप्रा बहुधा वदन्ति
+                        </div>
+
+                        <h1>
+
+                            <span class="शब्द शब्द-1">डिजिटल</span>
+
+                            <span class="शब्द शब्द-2">हन्ना</span>
+
+                            <span class="शब्द शब्द-3">आर्ट्स®</span>
+
+                        </h1>
+
+                        <p>
+
+                            <strong>कला</strong> और <strong>कलन-विधि</strong> के बीच,
+
+                            <strong>डेटा</strong> और <strong>स्वप्न</strong> के बीच,
+
+                            <strong>बुद्धि</strong> और <strong>सहज-बोध</strong> के बीच —
+
+                            डी.एच.ए. स्याही-शून्य में विचरण करता है।
+
+                        </p>
+
+                        <div class="hero-कर्म">
+
+                            <a href="#work" class="बटन बटन-प्रधान">
+                                〔 कार्य देखें 〕
+                            </a>
+
+                            <a
+                                href="https://github.com/DigitalHanaArts"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="बटन"
+                            >
+                                〔 स्रोत ↗ 〕
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-कला">
+
+                        <div class="मण्डल-चौखट">
+
+                            <div class="रंगोली"></div>
+
+                            <div class="मण्डल-वलय">
+
+                                <div class="वलय वलय-1"></div>
+                                <div class="वलय वलय-2"></div>
+                                <div class="वलय वलय-3"></div>
+                                <div class="वलय वलय-4"></div>
+
+                            </div>
+
+                            <div class="मण्डल-अक्षर">ॐ</div>
+
+                            <div class="मण्डल-टिप्पणी">DHA · डिजिटल हन्ना आर्ट्स · कला</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             चल-पट्टी
+        ================================================== -->
+
+        <div class="चल-पट्टी">
+
+            <div class="चल-पट्टी-सरणि">
+
+                <span>कला</span>
+                <span>डेटा</span>
+                <span>बुद्धि</span>
+                <span>श्रृंखला</span>
+                <span>सृजन</span>
+                <span>गणना</span>
+                <span>दर्शन</span>
+                <span>अमूर्त</span>
+                <span>यन्त्रशाला</span>
+                <span>मण्डल</span>
+                <span>पद्म</span>
+
+                <span>कला</span>
+                <span>डेटा</span>
+                <span>बुद्धि</span>
+                <span>श्रृंखला</span>
+                <span>सृजन</span>
+                <span>गणना</span>
+                <span>दर्शन</span>
+                <span>अमूर्त</span>
+                <span>यन्त्रशाला</span>
+                <span>मण्डल</span>
+                <span>पद्म</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             दर्शन · ABOUT
+        ================================================== -->
+
+        <section id="about">
+
+            <div class="पात्र">
+
+                <div class="दर्शन-जाल">
+
+                    <div class="दर्शन-चित्र"></div>
+
+
+                    <div class="दर्शन-वाणी">
+
+                        <span class="खण्ड-चिह्न">〔 १ · दर्शन 〕</span>
+
+                        <h2>
+
+                            तकनीक ही
+
+                            <span class="रेखांकित">सामग्री है।</span>
+
+                        </h2>
+
+                        <p>
+
+                            डिजिटल हन्ना आर्ट्स एक प्रयोगात्मक
+                            गणनात्मक-सृजनशीलता की कार्यशाला है,
+                            जो तकनीक और कलात्मक अभिव्यक्ति के बीच के
+
+                            <strong>अन्तराल-स्थल</strong> पर चलती है।
+
+                        </p>
+
+                        <p>
+
+                            हम सॉफ़्टवेयर, दृश्य-प्रणालियाँ,
+                            मशीन-अधिगम के प्रयोग, डेटा-चालित कला,
+                            और ब्लॉकचेन-उन्मुख अंकीय परिसम्पत्तियाँ
+
+                            रचते हैं — और इन सब के मूल में
+
+                            <strong>उत्तर-मानवीय संवेदना</strong> है।
+
+                        </p>
+
+                        <p>
+
+                            हमारा मूल प्रश्न सरल नहीं है:
+
+                            <strong>जब गणना सृजन का माध्यम बने,
+                            तब क्या होता है?</strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             चार-स्तम्भ · DOMAINS
+        ================================================== -->
+
+        <section id="domains">
+
+            <div class="पात्र">
+
+                <span class="खण्ड-चिह्न">〔 २ · स्तम्भ-चतुष्क 〕</span>
+
+                <h2 class="खण्ड-शीर्षक">
+
+                    चार स्तम्भ,
+
+                    <span class="छाया">एक तंत्र।</span>
+
+                    <span class="काट">कोई सीमा नहीं।</span>
+
+                </h2>
+
+                <p class="खण्ड-भूमिका">
+
+                    डी.एच.ए. किसी एक तकनीकी श्रेणी में नहीं,
+                    बल्कि विद्याओं के पार कार्यरत है।
+                    यह वियोजित जाल है।
+
+                </p>
+
+
+                <div class="स्तम्भ-चतुष्क">
+
+
+                    <article class="स्तम्भ" data-संख्या="१">
+
+                        <div class="स्तम्भ-चिह्न">◈</div>
+
+                        <h3>अंकीय कला</h3>
+
+                        <p>
+                            जनक-प्रणालियाँ, कलन-विधि कला,
+                            गणनात्मक छायाचित्रण,
+                            और प्रयोगात्मक अंकीय माध्यम।
+                        </p>
+
+                    </article>
+
+
+                    <article class="स्तम्भ" data-संख्या="२">
+
+                        <div class="स्तम्भ-चिह्न">◉</div>
+
+                        <h3>डेटा विज्ञान</h3>
+
+                        <p>
+                            डेटा-खनन, विश्लेषण, दृश्यांकन,
+                            सांख्यिकीय गणना,
+                            और डेटा-चालित खोज।
+                        </p>
+
+                    </article>
+
+
+                    <article class="स्तम्भ" data-संख्या="३">
+
+                        <div class="स्तम्भ-चिह्न">◍</div>
+
+                        <h3>बुद्धि</h3>
+
+                        <p>
+                            मशीन-अधिगम, गहन-अधिगम,
+                            संगणक-दृष्टि,
+                            और जनक कृत्रिम बुद्धि।
+                        </p>
+
+                    </article>
+
+
+                    <article class="स्तम्भ" data-संख्या="४">
+
+                        <div class="स्तम्भ-चिह्न">⛓</div>
+
+                        <h3>श्रृंखला</h3>
+
+                        <p>
+                            एन.एफ.टी., अंकीय परिसम्पत्तियाँ,
+                            श्रृंखला-विश्लेषण,
+                            और विकेन्द्रित सृजन-पारिस्थितिकी।
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             कार्य · PROJECTS
+        ================================================== -->
+
+        <section id="work">
+
+            <div class="पात्र">
+
+                <span class="खण्ड-चिह्न">〔 ३ · चयनित कार्य 〕</span>
+
+                <h2 class="खण्ड-शीर्षक">
+
+                    <span class="छाया">पिक्सेल</span> से
+
+                    <span class="काट">बुद्धि</span> तक।
+
+                </h2>
+
+
+                <!-- =========================================
+                     MLabChain · यन्त्रशाला-श्रृंखला
+                ========================================== -->
+                <div class="कार्य विस्तृत">
+
+                    <div class="कार्य-चित्र">
+
+                        <img
+                            src="assets/MLabChain_v3_Banner.png"
+                            alt="एम.लैब.चेन · MLabChain — ब्लॉकचेन शोध मंच"
+                            loading="lazy"
+                        >
+
+                        <img
+                            src="assets/mlabchain.png"
+                            alt="MLabChain मोहर"
+                            class="कार्य-मोहर"
+                        >
+
+                    </div>
+
+                    <div class="कार्य-विवरण">
+
+                        <span class="कार्य-शीर्षक-रेखा">〔 श्रृंखला-प्रोटोकॉल 〕</span>
+
+                        <h3>यन्त्रशाला<br>श्रृंखला</h3>
+
+                        <p>
+                            यह एक ब्लॉकचेन शोध एवं अभियांत्रिकी मंच है —
+                            जो प्रयोगशाला-विज्ञान, विकेन्द्रित संरचना,
+                            और प्रमाण्य गणना को एक सूत्र में पिरोता है।
+                        </p>
+
+                        <div class="तकनीक">
+
+                            <span>ब्लॉकचेन</span>
+                            <span>वितरित</span>
+                            <span>वेब3</span>
+                            <span>उच्च-ऊर्जा-भौतिकी</span>
+                            <span>शोध</span>
+
+                        </div>
+
+                        <div class="कार्य-कड़ियाँ">
+
+                            <a
+                                href="https://github.com/DigitalHanaArts/MLabChain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="बटन बटन-प्रधान"
+                            >
+                                〔 GitHub ↗ 〕
+                            </a>
+
+                            <a
+                                href="https://gitlab.cern.ch/abavarch/labchain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="बटन"
+                            >
+                                〔 GitLab ↗ 〕
+                            </a>
+
+                            <a
+                                href="https://digitalhanaarts.github.io/mlc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="बटन"
+                            >
+                                〔 जालस्थल ↗ 〕
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DHA Vision -->
+                <div class="कार्य">
+
+                    <div class="कार्य-चित्र">
+
+                        <img
+                            src="assets/DHA_Vision.png"
+                            alt="डी.एच.ए. दृष्टि"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="कार्य-विवरण">
+
+                        <span class="कार्य-शीर्षक-रेखा">〔 प्रायोगिक मंच 〕</span>
+
+                        <h3>डी.एच.ए.<br>दृष्टि</h3>
+
+                        <p>
+                            जूलिया पर आधारित एक गणनात्मक-कला मंच,
+                            जो यह खोजता है कि छायाचित्र किस प्रकार
+                            प्रतिबिम्ब-प्रसंस्करण, मशीन-अधिगम और
+                            जनक-प्रणालियों से गुज़र कर नए अंकीय
+                            कलाकृतियों में बदल जाते हैं।
+                        </p>
+
+                        <div class="तकनीक">
+
+                            <span>जूलिया</span>
+                            <span>फ़्लक्स</span>
+                            <span>मशीन-अधिगम</span>
+                            <span>प्रतिबिम्ब-प्रसंस्करण</span>
+                            <span>जनक कला</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/DigitalHanaArts/DHA-Vision"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="बटन"
+                        >
+                            〔 परियोजना देखें ↗ 〕
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OpenSea -->
+                <div class="कार्य">
+
+                    <div class="कार्य-चित्र">
+
+                        <img
+                            src="assets/opensea.io.jpeg"
+                            alt="ओपनसी संकलन"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="कार्य-विवरण">
+
+                        <span class="कार्य-शीर्षक-रेखा">〔 एन.एफ.टी. संकलन 〕</span>
+
+                        <h3>ओपनसी<br>संकलन</h3>
+
+                        <p>
+                            ओपनसी पर डिजिटल हन्ना आर्ट्स का
+                            आधिकारिक संकलन देखें — चयनित अंकीय
+                            परिसम्पत्तियाँ, जनक कलाकृतियाँ,
+                            और श्रृंखला-आधारित सृजन।
+                        </p>
+
+                        <div class="तकनीक">
+
+                            <span>एन.एफ.टी.</span>
+                            <span>ईथेरियम</span>
+                            <span>अंकीय कला</span>
+                            <span>ब्लॉकचेन</span>
+                            <span>ओपनसी</span>
+
+                        </div>
+
+                        <a
+                            href="https://opensea.io/Digital__Hana__Arts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="बटन"
+                        >
+                            〔 ओपनसी पर जाएँ ↗ 〕
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             हन्ना
+        ================================================== -->
+
+        <section id="hana">
+
+            <div class="पात्र">
+
+                <div class="हन्ना-जाल">
+
+                    <div class="हन्ना-वाणी">
+
+                        <span class="खण्ड-चिह्न">〔 ४ · मूल 〕</span>
+
+                        <h2>
+
+                            <span class="शब्द शब्द-1">मिलिए,</span>
+
+                            <span class="शब्द शब्द-2">हन्ना।</span>
+
+                        </h2>
+
+                        <p>
+                            डिजिटल हन्ना आर्ट्स का नाम
+                            "हन्ना" पर पड़ा —
+                            दृश्य-पहचान के हृदय में बैठी
+                            एक बिल्ली के बच्ची।
+                        </p>
+
+                        <p>
+                            उसकी उपस्थिति इस गणनात्मक संसार में
+                            जान-बूझकर कुछ जैविक और मानवीय
+                            घोलती है:
+
+                            <strong>जिज्ञासा, व्यक्तित्व, चरित्र।</strong>
+
+                        </p>
+
+                    </div>
+
+                    <div class="हन्ना-चित्र">
+
+                        <img
+                            src="assets/Hana_the_kitten.jpeg"
+                            alt="हन्ना — बिल्ली का बच्चा"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             प्रश्न · PHILOSOPHY
+        ================================================== -->
+
+        <section class="प्रश्न">
+
+            <div class="पात्र">
+
+                <span class="प्रश्न-चिह्न">〔 ५ · प्रश्न 〕</span>
+
+                <h2>
+
+                    <span class="पंक्ति पंक्ति-1">जब गणना</span>
+
+                    <span class="पंक्ति पंक्ति-2">सृजन का माध्यम</span>
+
+                    <span class="पंक्ति पंक्ति-3">बन जाए, तब क्या होता है?</span>
+
+                </h2>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         पाद · FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="पात्र">
+
+            <div class="पाद-जाल">
+
+                <div>
+
+                    <div class="पाद-चिह्न">
+
+                        <img
+                            src="assets/DHA_logo.png"
+                            alt="डिजिटल हन्ना आर्ट्स"
+                            class="पाद-चित्र"
+                        >
+
+                        <span>डिजिटल हन्ना आर्ट्स®</span>
+
+                    </div>
+
+                    <div class="पाद-उपशीर्षक">
+                        कला × डेटा × बुद्धि × श्रृंखला
+                    </div>
+
+                </div>
+
+                <div class="पाद-कड़ियाँ">
+
+                    <a
+                        href="https://github.com/DigitalHanaArts"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        〔 स्रोत 〕
+                    </a>
+
+                    <a href="#top">〔 शीर्ष पर ↑ 〕</a>
+
+                </div>
+
+            </div>
+
+            <div class="अधिकार">
+
+                <span>© 2026 डिजिटल हन्ना आर्ट्स®</span>
+
+                <span>गणना ही सृजन का माध्यम</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
